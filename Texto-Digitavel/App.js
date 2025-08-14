@@ -1,42 +1,31 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
-import * as Print from 'expo-print';
+import { useState } from 'react';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
-  const [texto, setTexto] = useState('');
-
-  const imprimir = async () => {
-    await Print.printAsync({
-      html: `<html><body><p>${texto}</p></body></html>`
-    });
-  };
+  const [nome, setNome] = useState('');
 
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Digite seu texto"
-        value={texto}
-        onChangeText={setTexto}
-        multiline
+        placeholder="Digite seu nome"
+        value={nome}
+        onChangeText={setNome}
       />
-      <Button title="Imprimir" onPress={imprimir} />
+      <Text style={styles.texto}>Olá, {nome || 'visitante'}!</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 20
-  },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
   input: {
-    height: 150,
-    borderColor: '#ccc',
+    height: 40,
+    borderColor: 'gray',
     borderWidth: 1,
+    width: '100%',
     marginBottom: 20,
-    padding: 10,
-    textAlignVertical: 'top'
-  }
+    paddingHorizontal: 10,
+  },
+  texto: { fontSize: 22 },
 });

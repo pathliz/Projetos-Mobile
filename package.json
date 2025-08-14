@@ -20,5 +20,8 @@
   "homepage": "https://github.com/pathliz/projetos-mobile#readme",
   "devDependencies": {
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.1.0"
   }
 }
