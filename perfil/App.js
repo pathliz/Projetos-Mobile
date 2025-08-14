@@ -18,7 +18,7 @@ export default function App() {
         {/* Nome e título */}
         <Text style={styles.name}>Patricia Lopes</Text>
         <Text style={styles.role}>Estudante de Engenharia de Software 
-          Formada em Engenharia de Materiais, efetiva na Prefeitura Municipal de Parauapebas </Text>
+          Formada em Engenharia de Materiais, efetiva na Prefeitura Municipal de Parauapebas como Auxiliar Administrativo </Text>
 
 
         {/* Ícones sociais */}
